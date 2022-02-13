@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechnicalAssessment", "TechnicalAssessment\TechnicalAssessment.csproj", "{1FF29FCE-33BA-4E62-B9D7-BA06B9C56E25}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CD6D73DB-65B9-479D-B735-889448694BC8}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		..\..\..\Desktop\rawCSV\names.csv = ..\..\..\Desktop\rawCSV\names.csv
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FF29FCE-33BA-4E62-B9D7-BA06B9C56E25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FF29FCE-33BA-4E62-B9D7-BA06B9C56E25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FF29FCE-33BA-4E62-B9D7-BA06B9C56E25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FF29FCE-33BA-4E62-B9D7-BA06B9C56E25}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD8C7F77-8643-405F-9085-CD21C2B85859}
+	EndGlobalSection
+EndGlobal
