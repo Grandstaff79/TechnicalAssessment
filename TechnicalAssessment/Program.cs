@@ -7,6 +7,7 @@ using System.IO;
 using System.Data;
 using System.Reflection;
 using LumenWorks.Framework.IO.Csv;
+using System.Net.Mail;
 
 
 namespace TechnicalAssessment
@@ -51,7 +52,7 @@ namespace TechnicalAssessment
 }
 
 
-
+                // Search for .csv file //
  
      void SearchFile(string fileName)
 {
@@ -65,6 +66,8 @@ namespace TechnicalAssessment
         }
     }
 }
+                        // Directory search for .csv file //
+
               void DirSearch(string dirctoryName, string fileName, List<string> files);
 
     try
@@ -83,7 +86,7 @@ namespace TechnicalAssessment
         Response.Write(excpt.Message);
     }
 
-
+                   // Checks to see if file exists or not.//
 
             if (File.Exists("names.csv"))
             {
@@ -96,7 +99,7 @@ namespace TechnicalAssessment
 
            
 
-      
+                // Parameter search // 
 
     public class SearchParameters
         {
@@ -107,16 +110,59 @@ namespace TechnicalAssessment
         }
     
 
-   
+        //Checks to see if Email is valid or invalid //
+
+             bool IsValidEmail(string email)
+    {
+                try {
+                    ar addr = new System.Net.Mail.MailAddress(email);
+                    return addr.Address == email;
+             }
+                catch {
+                    return false;
+            }
+        }
+
+                // 
+        class DataSetWithError: DataSet
+    {
+        public Exception msg { get; set; }
+    }
 
 
         
+            DataSetWithError dataSetWithError = SelectDataSet();
+        if (dataSetWithError.msg == null)
+    {
+            // Show data
+    }
+        else
+    {
+            MessageBox.Show(dataSetWithError.msg.ToString());
+    }
+                // Checks to see if the email address is found and valid //
 
-     
-
+        try{
+            string email = "test@gdcit.com";
+            Console.WriteLine($"The email is {email}");
+            var mail = new MailAddress(email);
+            bool isValidEmail = mail.Host.Contains(".");
+            if(!isValidEmail){
+               Console.WriteLine($"The email is invalid");
+            } else {
+               Console.WriteLine($"The email is valid");
+            }
+            Console.ReadLine();
+         }
+         catch(Exception){
+            Console.WriteLine($"The email is invalid");
+            Console.ReadLine();
+         }
+      
+   
 
             
-                
+             
    
         
     
